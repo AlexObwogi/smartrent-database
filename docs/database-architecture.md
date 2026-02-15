@@ -1,10 +1,25 @@
-SmartRent Database Architecture(V1)
+**SmartRent Database Architecture (V1)**
 
-Core Collections:
-1. Users
-2. Properties
-3. Bookings
-4. Payments
-5. Reviews
+**Database Technology**
 
-We use referencing(ObjectId refs) as the relationship strategy, this is because of scalability and analytics compatibility.
+Database: MongoDB (Atlas)
+Data Model: Document-based (BSON)
+Relationship Strategy: Referencing using ObjectId
+ODM: Mongoose
+
+**Core Collections**
+
+1. users
+2. properties
+3. bookings
+4. payments
+5. reviews
+
+**Architectural Principles**
+
+1. Avoid over-embedding
+2. Use referencing for scalability
+3. Enforce validation at schema level
+4. Normalize critical fields (email)
+5. Prepare structure for AI analytics
+6. Design with indexing in mind
